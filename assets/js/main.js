@@ -14,67 +14,63 @@ let pagThree = document.getElementById('pagThree')
 let index = 1
 
 arrowRight.addEventListener('click', () => {
-    if (index == 1) {
-        carrousel.style.transform = "translateX(-100%)"
-        index = 2
+    switch(index) {
+        case 1:
+            carrousel.style.transform = "translateX(-100%)"
+            index = 2
 
-        pagOne.classList.remove('active')
-        pagTwo.classList.add('active')
-        pagThree.classList.remove('active')
-    } else if (index == 2) {
-        carrousel.style.transform = "translateX(-200%)"
-        index = 3
-        
-        pagOne.classList.remove('active')
-        pagTwo.classList.remove('active')
-        pagThree.classList.add('active')
-    } else if (index == 3) {
-        carrousel.style.transform = "translateX(0%)"
-        index = 1
+            pagOne.classList.remove('active')
+            pagTwo.classList.add('active')
+            pagThree.classList.remove('active')
+            break
+        case 2:
+            carrousel.style.transform = "translateX(-200%)"
+            index = 3
 
-        pagOne.classList.add('active')
-        pagTwo.classList.remove('active')
-        pagThree.classList.remove('active')
+            pagOne.classList.remove('active')
+            pagTwo.classList.remove('active')
+            pagThree.classList.add('active')
+            break
+        case 3:
+            carrousel.style.transform = "translateX(0%)"
+            index = 1
+
+            pagOne.classList.add('active')
+            pagTwo.classList.remove('active')
+            pagThree.classList.remove('active')
+            break
+        default:
+            break
     }
 })
 
 arrowLeft.addEventListener('click', () => {
-    if (index == 1) {
-        carrousel.style.transform = 'translateX(-200%)'
-        index = 3
-        
-        pagOne.classList.remove('active')
-        pagTwo.classList.remove('active')
-        pagThree.classList.add('active')
-    } else if (index == 2) {
-        carrousel.style.transform = 'translateX(0%)'
-        index = 1
+    switch (index) {
+        case 1:
+            carrousel.style.transform = 'translateX(-200%)'
+            index = 3
 
-        pagOne.classList.add('active')
-        pagTwo.classList.remove('active')
-        pagThree.classList.remove('active')
-    } else if (index == 3) {
-        carrousel.style.transform = 'translateX(-100%)'
-        index = 2
+            pagOne.classList.remove('active')
+            pagTwo.classList.remove('active')
+            pagThree.classList.add('active')
+            break
+        case 2:
+            carrousel.style.transform = 'translateX(0%)'
+            index = 1
 
-        pagOne.classList.remove('active')
-        pagTwo.classList.add('active')
-        pagThree.classList.remove('active')
+            pagOne.classList.add('active')
+            pagTwo.classList.remove('active')
+            pagThree.classList.remove('active')
+            break
+        case 3:
+            carrousel.style.transform = 'translateX(-100%)'
+            index = 2
+
+            pagOne.classList.remove('active')
+            pagTwo.classList.add('active')
+            pagThree.classList.remove('active')
+            break
+        default:
+            break
     }
-})
-
-let hoverOne = document.getElementById('hoverOne')
-let hoverTwo = document.getElementById('hoverTwo')
-let hoverThree = document.getElementById('hoverThree')
-
-carrousel.addEventListener('mouseenter', () => {
-    hoverOne.style.height = '100%'
-    hoverTwo.style.height = '100%'
-    hoverThree.style.height = '100%'
-})
-
-carrousel.addEventListener('mouseleave', () => {
-    hoverOne.style.height = '0'
-    hoverTwo.style.height = '0'
-    hoverThree.style.height = '0'
 })
