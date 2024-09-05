@@ -133,7 +133,7 @@ h2 {
 }
 
 .cards {
-    /* animation-timeline: view(); */
+    animation-timeline: view();
     animation-range: entry 0% cover 25%;
 }
 
