@@ -25,10 +25,19 @@ const app = Vue.createApp({
             
         },
         decrementCarousel() {
-            if (this.handleCarrusel == 0) {
-                this.handleCarrusel = -156
+            if (screen.width < 768) {
+                this.handleSizeCarrusel = 'vw'
+                if (this.handleCarrusel == 0) {
+                    this.handleCarrusel = -360
+                } else {
+                    this.handleCarrusel += 90
+                }
             } else {
-                this.handleCarrusel += 39
+                if (this.handleCarrusel == 0) {
+                    this.handleCarrusel = -156
+                } else {
+                    this.handleCarrusel += 39
+                }
             }
         },
     },
