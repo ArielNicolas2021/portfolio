@@ -130,6 +130,14 @@ h2 {
     width: 624px;
 }
 
+.carrusel-mobile {
+    display: none;
+}
+
+.carrusel-desktop {
+    display: block;
+}
+
 .carrusel-block {
     position: relative;
 }
@@ -343,6 +351,14 @@ h2 {
 
     .carrusel-container {
         width: 90vw;
+    }
+
+    .carrusel-desktop {
+        display: none;
+    }
+
+    .carrusel-mobile {
+        display: block;
     }
 
     .carrusel-arrows {
