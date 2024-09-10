@@ -33,6 +33,7 @@ const app = Vue.createApp({
                     this.handleCarrusel += 90
                 }
             } else {
+                this.handleSizeCarrusel = 'rem'
                 if (this.handleCarrusel == 0) {
                     this.handleCarrusel = -156
                 } else {
