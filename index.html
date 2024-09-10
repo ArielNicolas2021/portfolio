@@ -65,9 +65,7 @@
                 <div
                     class="hero-content-left animate__animated animate__backInLeft col-md-6 col-sm-9 d-flex flex-column justify-content-center gap-3">
                     <h2 class="hero-content-title">Hola! Soy Ariel Aguilar</h2>
-                    <p class="hero-content-text">Programador web Full Stack y escritor de contenido de Buenos Aires,
-                        Argentina. Me especializo en la corrección de bugs, diseño y programación de sitios web
-                        responsivos y aplicaciones web.</p>
+                    <p class="hero-content-text">Programador web Full Stack y escritor de contenido de Buenos Aires, Argentina. Me especializo en la corrección de bugs, diseño y programación de sitios web responsivos y aplicaciones web.</p>
                     <div class="hero-button">
                         <a download href="assets/images/Ariel Aguilar CV.pdf" class="hero-btn">Descargar CV</a>
                     </div>
@@ -81,43 +79,94 @@
     </header>
     <main>
         <!-- Proyectos -->
-        <article class="proyectos container-md d-flex flex-column justify-content-center align-items-center gap-3" id="proyectos">
-            <div class="proyectos-content d-flex flex-column align-items-center gap-4">
+        <article class="proyectos container-md d-flex flex-column justify-content-center align-items-center gap-3 py-4" id="proyectos">
+            <div class="proyectos-content d-flex flex-column align-items-center gap-4 h-25">
                 <h2>Proyectos más destacados</h2>
-                <p class="col-sm-8">Estos son algunos de mis proyectos. Haciendo click podrás ver el stack de
-                    tecnologías que utilize en
-                    cada proyecto y el link a su sitio web.</p>
+                <p class="col-sm-8">Estos son algunos de mis proyectos. Haciendo click podrás ver el stack de tecnologías que utilize en cada proyecto y el link a su sitio web.</p>
             </div>
-            <div id="carouselExampleIndicators" class="carousel slide col-md-8 col-sm-10 col-">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
+            <div class="proyectos-carrusel h-75 d-flex align-items-center gap-3">
+                <i class="bx bx-chevron-left desktop-arrows" @click="decrementCarousel"></i>
+                <div class="carrusel-container">
+                    <div class="carrusel d-flex h-100" :style="{translate: handleCarrusel + handleSizeCarrusel}">
+                        <div class="carrusel-block">
+                            <img src="./assets/images/eisenhowerdesktop.png" alt="eisenhower app desktop" class="carousel-desktop-img h-100">
+                            <div class="carrusel-hover d-flex flex-column justify-content-center align-items-center px-3">
+                                <div class="tools d-flex flex-wrap justify-content-center align-items-center">
+                                    <span>HTML</span>
+                                    <hr>
+                                    <span>CSS</span>
+                                    <hr>
+                                    <span>JavaScript</span>
+                                    <hr>
+                                    <span>Vue.js</span>
+                                </div>
+                                <h3>Eisenhower app</h3>
+                                <a href="#">Ver más -></a>
+                            </div>
+                        </div>
+                        <div class="carrusel-block">
+                            <img src="./assets/images/puntopenaldesktop.png" alt="punto penal desktop" class="h-100">
+                            <div class="carrusel-hover d-flex flex-column justify-content-center align-items-center">
+                                <div class="tools d-flex flex-wrap justify-content-center align-items-center">
+                                    <span>HTML</span>
+                                    <hr>
+                                    <span>CSS</span>
+                                    <hr>
+                                    <span>JavaScript</span>
+                                </div>
+                                <h3>Punto Penal</h3>
+                                <a href="https://github.com/ArielNicolas2021/PuntoPenal" target="_blank">Ver más -></a>
+                            </div>
+                        </div>
+                        <div class="carrusel-block">
+                            <img src="./assets/images/crud-reservas-desktop.png" alt="crud reservas desktop" class="h-100">
+                            <div class="carrusel-hover d-flex flex-column justify-content-center align-items-center">
+                                <div class="tools d-flex flex-wrap justify-content-center align-items-center">
+                                    <span>Vue.js</span>
+                                    <hr>
+                                    <span>SQL</span>
+                                    <hr>
+                                    <span>Python</span>
+                                </div>
+                                <h3>CRUD Reservas</h3>
+                                <a href="https://github.com/ArielNicolas2021/crud-reservas" target="_blank">Ver más -></a>
+                            </div>
+                        </div>
+                        <div class="carrusel-block">
+                            <img src="./assets/images/lista-de-tareas-desktop.png" alt="lista de tareas" class="h-100">
+                            <div class="carrusel-hover d-flex flex-column justify-content-center align-items-center">
+                                <div class="tools d-flex flex-wrap justify-content-center align-items-center">
+                                    <span>HTML</span>
+                                    <hr>
+                                    <span>CSS</span>
+                                    <hr>
+                                    <span>Javascript</span>
+                                </div>
+                                <h3>Lista de tareas</h3>
+                                <a href="https://github.com/ArielNicolas2021/Lista-de-tareas" target="_blank">Ver más -></a>
+                            </div>
+                        </div>
+                        <div class="carrusel-block">
+                            <img src="./assets/images/pokeapi-desktop.png" alt="pokeapi" class="h-100">
+                            <div class="carrusel-hover d-flex flex-column justify-content-center align-items-center">
+                                <div class="tools d-flex flex-wrap justify-content-center align-items-center">
+                                    <span>HTML</span>
+                                    <hr>
+                                    <span>CSS</span>
+                                    <hr>
+                                    <span>Javascript</span>
+                                </div>
+                                <h3>Pokeapi</h3>
+                                <a href="https://github.com/ArielNicolas2021/Pokeapi" target="_blank">Ver más -></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./assets/images/eisenhowerdesktop.png" class="d-block w-100" alt="eisenhower app desktop">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./assets/images/puntopenaldesktop.png" class="d-block w-100" alt="punto penal desktop">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./assets/images/crud-reservas-desktop.png" class="d-block w-100" alt="crud reservas desktop">
-                    </div>
+                <i class="bx bx-chevron-right desktop-arrows" @click="incrementCarousel"></i>
+                <div class="carrusel-arrows">
+                    <i class="bx bx-chevron-left" @click="decrementCarousel"></i>
+                    <i class="bx bx-chevron-right" @click="incrementCarousel"></i>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </article>
         <!-- /Proyectos -->
@@ -126,9 +175,8 @@
         <article class="habilidades" id="habilidades">
             <div class="habilidades-content container-md d-flex flex-column align-items-center">
                 <h2 class="habilidades-title col-sm-8 text-center">Habilidades</h2>
-                <p class="habilidades-text col-sm-8">Mis habilidades técnicas y sociales que utilizo para la programación web.
-                </p>
-                <div class="cards row animate__animated animate__slideInLeft">
+                <p class="habilidades-text col-sm-8">Mis habilidades técnicas y sociales que utilizo para la programación web. </p>
+                <div class="cards row justify-content-center animate__animated animate__slideInLeft">
                     <div class="col-md col-sm-8 d-flex justify-content-center">
                         <div class="card gap-3">
                             <img src="assets/images/backend.png" alt="card image" class="card-img" draggable="false">
@@ -166,14 +214,13 @@
             <div class="cta-container row">
                 <div class="cta-content col d-flex flex-column gap-3">
                     <h2 class="cta-title">Si quieres saber más sobre mi, contactame</h2>
-                    <p class="cta-text">Mi horario de atención es de 08:00hs a 18:00hs horario Argentina. Suelo
-                        responder más rápido via email.</p>
+                    <p class="cta-text">Mi horario de atención es de 08:00hs a 18:00hs horario Argentina. Suelo responder más rápido via email.</p>
                     <div class="cta-btn d-flex">
                         <a class="d-flex justify-content-center align-items-center" href="mailto:ariel.nicolas.aguilar@gmail.com">Contactar -></a>
                     </div>
                 </div>
-                <div class="cta-info col d-flex flex-column justify-content-center gap-2">
-                    <div class="cta-block d-flex align-items-center gap-2">
+                <div class="cta-info col d-flex flex-column justify-content-center gap-3">
+                    <div class="cta-block d-flex align-items-center gap-3">
                         <i class='bx bx-envelope'></i>
                         <div class="cta-info-content d-flex flex-column">
                             <span>Envíame un email</span>
@@ -220,9 +267,7 @@
     <!-- Vue.js -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <!-- Bootstrap.js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <script src="assets/js/main.js"></script>
 </body>
